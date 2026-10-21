@@ -1,0 +1,17 @@
+appId: io.openfrontjo.desktop
+productName: OpenFrontJO
+copyright: AGPL-3.0-only
+directories:
+  output: release
+files:
+  - dist/**
+  - package.json
+extraResources:
+  - from: ../static
+    to: static
+asar: true
+win:
+  # Unsigned local build. No certificate, so skip the signtool edit step.
+  signAndEditExecutable: false
+  target:
+    - portable

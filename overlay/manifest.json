@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "OpenFrontJO Overlay",
+  "version": "0.1.0",
+  "description": "Visual overlay for openfront.io. Reads the page and clicks its existing buttons. Does not change the game connection.",
+  "content_scripts": [
+    {
+      "matches": ["https://openfront.io/*", "https://*.openfront.io/*"],
+      "js": ["dist/content.js"],
+      "css": ["src/content.css"],
+      "type": "module",
+      "run_at": "document_idle"
+    }
+  ]
+}

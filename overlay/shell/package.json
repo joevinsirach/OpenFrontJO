@@ -1,0 +1,6 @@
+{
+  "name": "openfront-jo-overlay-shell",
+  "private": true,
+  "main": "main.mjs",
+  "type": "module"
+}

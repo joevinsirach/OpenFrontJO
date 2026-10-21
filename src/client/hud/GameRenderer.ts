@@ -36,6 +36,7 @@ import { GameRightSidebar } from "./layers/GameRightSidebar";
 import { HeadsUpMessage } from "./layers/HeadsUpMessage";
 import { ImmunityTimer } from "./layers/ImmunityTimer";
 import { InGamePromo } from "./layers/InGamePromo";
+import { LiveRosterPanel } from "./layers/LiveRosterPanel";
 import { MainRadialMenu } from "./layers/MainRadialMenu";
 import { MultiTabModal } from "./layers/MultiTabModal";
 import { NewLobbyPrompt } from "./layers/NewLobbyPrompt";
@@ -319,6 +320,11 @@ export function createRenderer(
   tutorialPanel.userSettings = userSettings;
   tutorialPanel.uiState = uiState;
 
+  document.querySelector("live-roster-panel")?.remove();
+  const liveRoster = new LiveRosterPanel();
+  liveRoster.game = game;
+  document.body.append(liveRoster);
+
   const layers: Controller[] = [
     new WarshipSelectionController(game, eventBus, transformHandler, view),
     new BuildPreviewController(
@@ -357,6 +363,7 @@ export function createRenderer(
     unitDisplay,
     gameRightSidebar,
     controlPanel,
+    liveRoster,
     playerInfo,
     winModal,
     newLobbyPrompt,

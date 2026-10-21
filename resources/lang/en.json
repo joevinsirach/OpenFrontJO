@@ -1406,6 +1406,9 @@
     "type": "Type",
     "warships": "Warships"
   },
+  "live_roster": {
+    "title": "Live roster"
+  },
   "leaderboard_modal": {
     "clan": "Clan",
     "clans_tab": "Clans",

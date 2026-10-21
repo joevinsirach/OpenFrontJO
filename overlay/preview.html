@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aperçu des fenêtres</title>
+    <link rel="stylesheet" href="src/content.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 22% 30%, #3b6b3a 0 18%, transparent 19%),
+          radial-gradient(circle at 70% 60%, #6b4b2f 0 22%, transparent 23%),
+          radial-gradient(circle at 55% 20%, #2f5d6b 0 12%, transparent 13%),
+          #16324a;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      const html = await fetch("fixtures/official-ingame.html").then((response) =>
+        response.text(),
+      );
+      document.body.insertAdjacentHTML("afterbegin", html);
+      const { startOverlay } = await import("./dist/mount.js");
+      startOverlay(document);
+      document.querySelector(".ofjo-settings")?.classList.add("ofjo-open");
+    </script>
+  </body>
+</html>

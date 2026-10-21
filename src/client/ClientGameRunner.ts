@@ -888,6 +888,7 @@ async function createClientGame(
       view.dispose();
       glCanvas.remove();
       inputOverlay.remove();
+      document.querySelector("live-roster-panel")?.remove();
     };
 
     console.log(

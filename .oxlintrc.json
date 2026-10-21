@@ -6,7 +6,8 @@
   },
   "ignorePatterns": [
     "src/server/gatekeeper/**",
-    "tests/pathfinding/playground/**"
+    "tests/pathfinding/playground/**",
+    "electron/**"
   ],
   "categories": {
     "correctness": "off",

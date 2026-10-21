@@ -1,5 +1,8 @@
 build/
 node_modules
+electron/dist/
+electron/release/
+overlay/dist/
 .worktrees/
 out/
 static/

@@ -1,0 +1,223 @@
+<style>
+  .hidden {
+    display: none;
+  }
+  .lg\:block.hidden {
+    display: block;
+  }
+  .lg\:hidden {
+    display: none;
+  }
+</style>
+
+<control-panel class="w-full">
+  <div class="relative pointer-events-auto w-full text-sm px-2 py-1">
+    <div class="lg:hidden">
+      <div class="border-yellow-400">
+        <img src="/images/GoldCoinIcon.svg" alt="" />
+        <span class="tabular-nums">MOBILE_GOLD</span>
+      </div>
+      <span>+1/s</span>
+      <span>1% (1)</span>
+      <input type="range" min="1" max="100" value="1" />
+    </div>
+    <div class="hidden lg:block">
+      <div class="flex items-center gap-1.5 px-1.5 py-1 rounded-md border">
+        <span class="shrink-0">⚠</span>
+        <span>You're near your army limit! Consider sending troops to teammates.</span>
+      </div>
+      <div class="flex gap-1.5 items-center">
+        <div translate="no">
+          <img src="/images/SoldierIcon.svg" alt="" />
+          <span>+120/s</span>
+        </div>
+        <div class="w-full h-6 border border-gray-600 rounded-md">
+          <div class="absolute inset-0 flex items-center" translate="no">
+            <span class="flex-1">
+              <span>4.89K</span>
+            </span>
+            <span>/</span>
+            <span class="flex-1">
+              <span>80.0K</span>
+              <img src="/images/SoldierIcon.svg" alt="" />
+            </span>
+          </div>
+        </div>
+        <div class="border-yellow-400" translate="no">
+          <img src="/images/GoldCoinIcon.svg" width="13" height="13" />
+          <span class="tabular-nums">6.40K</span>
+        </div>
+      </div>
+      <div translate="no">
+        <div>
+          <img src="/images/SwordIcon.svg" alt="" />
+          <span>20% (980)</span>
+        </div>
+        <input type="range" min="1" max="100" value="20" />
+      </div>
+    </div>
+  </div>
+</control-panel>
+
+<game-left-sidebar>
+  <aside>
+    <div>
+      <span style="--color: rgb(10, 20, 30)">Blue &#10687;</span>
+    </div>
+    <player-stats class="block min-w-0">
+      <div class="stats-table" role="table">
+        <div class="stats-table-header" role="row">
+          <div class="stats-table-header-cell" role="columnheader" title="Rank">
+            <button type="button" aria-label="Rank"><span>#</span></button>
+          </div>
+          <div class="stats-table-header-cell" role="columnheader" title="Player">
+            <button type="button" aria-label="Player">
+              <img src="/images/ProfileIcon.svg" alt="" />
+            </button>
+          </div>
+          <div class="stats-table-header-cell" role="columnheader" title="Gold">
+            <button type="button" aria-label="Gold">
+              <img src="/images/GoldCoinIcon.svg" alt="" />
+            </button>
+          </div>
+          <div class="stats-table-header-cell" role="columnheader" title="Gold Income/min">
+            <button type="button" aria-label="Gold Income/min">
+              <img src="/images/GoldCoinIcon.svg" alt="" />
+              <span>/m</span>
+            </button>
+          </div>
+          <div class="stats-table-header-cell" role="columnheader" title="Troops">
+            <button type="button" aria-label="Troops">
+              <img src="/images/SoldierIcon.svg" alt="" />
+            </button>
+          </div>
+          <div class="stats-table-header-cell" role="columnheader" title="Max Troops">
+            <button type="button" aria-label="Max Troops">
+              <img src="/images/SoldierIcon.svg" alt="" />
+              <img src="/images/UpperLimitIcon.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="stats-table-row stats-table-pinned-row" role="row">
+          <div class="stats-table-cell" role="cell"><span>5</span></div>
+          <div class="stats-table-cell" role="cell"><span>AnonCastle1</span></div>
+          <div class="stats-table-cell" role="cell"><span>6.40K</span></div>
+          <div class="stats-table-cell" role="cell"><span>60.0K</span></div>
+          <div class="stats-table-cell" role="cell"><span>4.89K</span></div>
+          <div class="stats-table-cell" role="cell"><span>80.0K</span></div>
+        </div>
+        <div class="stats-table-row" role="row">
+          <div class="stats-table-cell" role="cell"><span>1</span></div>
+          <div class="stats-table-cell" role="cell"><span>France</span></div>
+          <div class="stats-table-cell" role="cell"><span>0</span></div>
+          <div class="stats-table-cell" role="cell"><span>0</span></div>
+          <div class="stats-table-cell" role="cell"><span>1.25K</span></div>
+          <div class="stats-table-cell" role="cell"><span>50.0K</span></div>
+        </div>
+      </div>
+    </player-stats>
+  </aside>
+</game-left-sidebar>
+
+<player-panel>
+  <div class="fixed inset-0">
+    <h2 title="France">France</h2>
+    <div class="mt-1" role="status">
+      <span class="rounded-full">
+        <img src="/images/TraitorIconLightRed.svg" alt="" />
+        <span>Traitor</span>
+      </span>
+    </div>
+    <div class="mt-1">
+      <span class="text-sm font-semibold rounded-full">Hostile</span>
+    </div>
+    <div>
+      <span>💰</span>
+      <span translate="no" class="tabular-nums">0</span>
+      <span>Gold</span>
+    </div>
+    <div>
+      <span>🛡️</span>
+      <span translate="no" class="tabular-nums">1.25K</span>
+      <span>Troops</span>
+    </div>
+    <button type="button" aria-label="Send Alliance" title="Send Alliance">
+      <img src="/images/AllianceIconWhite.svg" alt="" />
+      <span>Send Alliance</span>
+    </button>
+  </div>
+</player-panel>
+
+<player-info-overlay>
+  <button type="button" title="Boat Attack">
+    <img src="/images/BoatIconWhite.svg" alt="" />
+  </button>
+</player-info-overlay>
+
+<attacks-display>
+  <div class="grid">
+    <div class="flex">
+      <button type="button">↓ 12.0K France</button>
+      <button type="button">Riposte</button>
+    </div>
+  </div>
+</attacks-display>
+
+<events-display>
+  <div class="events-container">
+    <table>
+      <tbody>
+        <tr><td>France attacked you</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="important-events-container">
+    <table>
+      <tbody>
+        <tr><td>Alliance broken</td></tr>
+      </tbody>
+    </table>
+  </div>
+</events-display>
+
+<actionable-events>
+  <div>
+    <div class="rounded-lg">
+      <button type="button">France requests alliance</button>
+      <button type="button">Accept</button>
+      <button type="button">Reject</button>
+    </div>
+  </div>
+</actionable-events>
+
+<unit-display class="hidden lg:block">
+  <div class="cursor-pointer">
+    <div>1</div>
+    <div>
+      <img alt="city" src="/images/CityIcon.svg" />
+      <span>3</span>
+    </div>
+  </div>
+</unit-display>
+
+<build-menu>
+  <div class="build-menu">
+    <button class="build-button" type="button">
+      <span class="build-name">City</span>
+      <span class="build-cost">125K</span>
+      <span class="build-count">2</span>
+    </button>
+  </div>
+</build-menu>
+
+<game-right-sidebar>
+  <aside class="translate-x-0">
+    <div data-game-timer>12:34</div>
+    <div class="cursor-pointer">
+      <img alt="settings" src="/images/SettingsIcon.svg" />
+    </div>
+    <div class="cursor-pointer">
+      <img alt="exit" src="/images/ExitIcon.svg" />
+    </div>
+  </aside>
+</game-right-sidebar>
